@@ -29,7 +29,7 @@ class UtilisateurController extends AbstractController
         ]);
         
     }
-    #[Route('/test', name: 'test', methods: ['POST'] ) ]
+    #[Route('/test', name: 'test', methods: ['POST','GET'] ) ]
     public function new(Request $request, EntityManagerInterface $entityManager) {
     $utilisateur = new Utilisateur();
     $form = $this->createForm(UtilisateurType::class,$utilisateur);
