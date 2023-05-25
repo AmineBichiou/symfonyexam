@@ -27,7 +27,7 @@ class ProjetController extends AbstractController
             'path' => 'src/Controller/ProjetController.php',
         ]);
     }
-    #[Route('/tester', name: 'tester',methods: ['POST'] ) ]
+    #[Route('/tester', name: 'tester',methods: ['POST','GET'] ) ]
     public function new(Request $request, EntityManagerInterface $entityManager) {
     $projet = new Projet();
     $form = $this->createForm(ProjetType::class,$projet);
